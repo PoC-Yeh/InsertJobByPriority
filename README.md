@@ -20,7 +20,7 @@ It is a function for generating a list of mock tasks.  Each element in the list 
 3. `execute()`: The actaul function of running the input task list in an order of task priorites.
 
 # Result
-When run runTaskByPriority.py, the result would be like the followings :
+The result of running `runTaskByPriority.py` would be like the followings :
 ```
 Tasks generated:
 [{'command': 'mnDO_0', 'priority': 2},
