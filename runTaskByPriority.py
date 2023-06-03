@@ -43,25 +43,8 @@ def generateTaskList(itemNum=6,
     return taskList
 
 
-
-def sortTaskByPriority(taskList, largeToSmall=True):
-    """ Sort a list of tasks by their priority numbers.
-
-    :param taskList: list of tasks
-                     Each task is a dictionary containing 2 keys 'priority' and 'command'
-    :type taskList: list of dictionaries
-
-    :param largeToSmall: if sorting the list by larger priority numbers to smaller priority numbers.
-    :type largeToSmall: bool
-
-    :return: a list of sorted tasks
-    :rtype: list
-    """
-    return sorted(taskList, key=lambda task: task.get('priority'), reverse=largeToSmall)
-
-
 def runTasks(tasks):
-    """ A mock of running the command of the task.
+    """ A mock of running the task.
 
     :param tasks: list of tasks
                   Each task is a dictionary containing 2 keys 'priority' and 'command'
@@ -75,13 +58,13 @@ def runTasks(tasks):
 
 
 
-def execute(priorityLagerToSmall=True):
-    """
+def execute():
+    """ Generate a list of mock tasks and run the tasks in the order of their priorities.
 
     :return:
     """
     taskList = generateTaskList(itemNum=10, commandTextCount=4)
-    sortedTaskList = sortTaskByPriority(taskList, largeToSmall=priorityLagerToSmall)
+    sortedTaskList = sorted(taskList, key=lambda task: task.get('priority'), reverse=True)
 
     print('Tasks generated:')
     pprint.pprint(taskList)
