@@ -62,12 +62,12 @@ def execute():
     :return:
     """
     taskList = generateTaskList(itemNum=10, commandTextCount=4)
-    sortedTaskList = sorted(taskList, key=lambda task: task.get('priority'), reverse=True)
 
     print('Tasks generated:')
     pprint.pprint(taskList)
     print('\n[Run tasks]', '-' * 20)
 
+    sortedTaskList = sorted(taskList, key=lambda task: task.get('priority'), reverse=True)
     for task in sortedTaskList:
         runTaskCommand(task)
 
