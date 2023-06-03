@@ -3,7 +3,7 @@ Implement a simple priority queue. Assume an incoming stream of dictionaries con
 
 # Details
 1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: 
-It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number. The values of `priority` are interger in a range from 0 to 10.
+It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 0 to 10.
    - `itemNum`:  Decide the amonut of tasks in the list. Default is 6.
    - `commandTextCount`: The amount of ramdom alphabet characters in `command`. Default is 4.
    - `priorityRange`: For setting the range of priority. Default is (0, 10) 
