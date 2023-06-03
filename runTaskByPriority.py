@@ -56,7 +56,7 @@ def runTaskCommand(task):
 
 
 
-def runTaskByPriority(taskList):
+def runTasksByPriority(taskList):
     """ Run the tasks in the order of their priorities.
 
     :return:
@@ -73,5 +73,5 @@ if __name__ == '__main__':
     pprint.pprint(taskList)
     print('\n[Run tasks]', '-' * 20)
 
-    runTaskByPriority(taskList)
+    runTasksByPriority(taskList)
 
