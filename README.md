@@ -17,7 +17,7 @@ It is a function for generating a list of mock tasks.  Each element in the list 
 ```
 
 2. `runTaskCommand(dict)`: Run the command of the task. (In this case, it is printing out string like: `run command: TpKE_2, task priority: 10`.)
-3. `runTasksByPriority()`: The actaul function of running the input task list in an order of task priorities.
+3. `runTasksByPriority()`: The actaul function of running the input task list in an order of task priorities. Higher priorities are having lagerer numerical value.
 
 # Result
 The result of running `runTasksByPriorityTest.py` would be like the followings :
