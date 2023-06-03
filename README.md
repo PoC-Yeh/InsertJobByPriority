@@ -13,11 +13,7 @@ It is a function for generating a list of mock tasks.  Each element in the list 
  {'command': 'TpKE_2', 'priority': 10},
  {'command': 'vyLL_3', 'priority': 3},
  {'command': 'Gybo_4', 'priority': 9},
- {'command': 'cDIN_5', 'priority': 6},
- {'command': 'IObN_6', 'priority': 3},
- {'command': 'HglU_7', 'priority': 5},
- {'command': 'ERRH_8', 'priority': 7},
- {'command': 'Yzvb_9', 'priority': 9}]
+ {'command': 'cDIN_5', 'priority': 6}]
 ```
 
 2. `runTaskCommand(dict)`: Run the command of the task. (In this case, it is printing out string like: `run command: TpKE_2, task priority: 10`.
