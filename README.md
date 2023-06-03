@@ -1,4 +1,4 @@
-# runTaskByPriority
+# runTasksByPriorityTest
 Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [0, 10], where work items of the same priority are processed in the order they are received. 
 
 # Details
@@ -20,7 +20,7 @@ It is a function for generating a list of mock tasks.  Each element in the list 
 3. `runTasksByPriority()`: The actaul function of running the input task list in an order of task priorities.
 
 # Result
-The result of running `runTaskByPriority.py` would be like the followings :
+The result of running `runTasksByPriorityTest.py` would be like the followings :
 ```
 Tasks generated:
 [{'command': 'mnDO_0', 'priority': 2},
