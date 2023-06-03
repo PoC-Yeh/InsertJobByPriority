@@ -20,7 +20,7 @@ It is a function for generating a list of mock tasks.  Each element in the list 
  {'command': 'Yzvb_9', 'priority': 9}]
 ```
 
-2. `runTaskCommand(dict)`: Run the command of the task. Here
+2. `runTaskCommand(dict)`: Run the command of the task. (In this case, it is printing out string like: `run command: TpKE_2, task priority: 10`.
 3. `execute()`:
 
 # Result
