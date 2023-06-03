@@ -3,6 +3,8 @@ Implement a simple priority queue. Assume an incoming stream of dictionaries con
 
 # detail
 
+# result
+When run runTaskByPriority.py, the result would be like the followings :
 ```
 Tasks generated:
 [{'command': 'mnDO_0', 'priority': 2},
