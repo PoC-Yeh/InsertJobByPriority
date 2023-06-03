@@ -17,7 +17,7 @@ def generateTaskList(itemNum=6,
     :param priorityRange: the range of the priority
     :type priorityRange: tuple of integers
 
-    :return: a list of dictionaries containing 2 keys 'priority' and 'command'
+    :return: a list of dictionaries containing 2 keys 'command' and 'priority'
             Example:
             [
             {'priority': 7, 'command': 'UviP_0'},
@@ -43,18 +43,16 @@ def generateTaskList(itemNum=6,
     return taskList
 
 
-def runTasks(tasks):
-    """ A mock of running the task.
+def runTaskCommand(task):
+    """ A mock of running the command of the task.
 
-    :param tasks: list of tasks
-                  Each task is a dictionary containing 2 keys 'priority' and 'command'
-    :type tasks: list
+    :param task: a dictionary containing 2 keys 'command' and 'priority'
+    :type task: dict
 
     :return:
     """
-    for task in tasks:
-        print('run command: {}, task priority: {}'.format(task.get('command'),
-                                                          task.get('priority')))
+    print('run command: {}, task priority: {}'.format(task.get('command'),
+                                                      task.get('priority')))
 
 
 
@@ -70,7 +68,8 @@ def execute():
     pprint.pprint(taskList)
     print('\n[Run tasks]', '-' * 20)
 
-    runTasks(sortedTaskList)
+    for task in sortedTaskList:
+        runTaskCommand(task)
 
 
 if __name__ == '__main__':
