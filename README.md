@@ -1,5 +1,9 @@
-# runTasksByPriorityTest
+# Request
 Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [0, 10], where work items of the same priority are processed in the order they are received. 
+
+# What it does?
+1. Generate a mock task list for test.
+2. Dry run the command of each tasks. (printing out the command)
 
 # Details
 1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: 
