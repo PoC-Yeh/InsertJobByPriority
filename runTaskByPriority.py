@@ -56,22 +56,22 @@ def runTaskCommand(task):
 
 
 
-def execute():
-    """ Generate a list of mock tasks and run the tasks in the order of their priorities.
+def runTaskByPriority(taskList):
+    """ Run the tasks in the order of their priorities.
 
     :return:
     """
-    taskList = generateTaskList(itemNum=10, commandTextCount=4)
-
-    print('Tasks generated:')
-    pprint.pprint(taskList)
-    print('\n[Run tasks]', '-' * 20)
-
     sortedTaskList = sorted(taskList, key=lambda task: task.get('priority'), reverse=True)
     for task in sortedTaskList:
         runTaskCommand(task)
 
 
 if __name__ == '__main__':
-    execute()
+    taskList = generateTaskList(itemNum=10, commandTextCount=4)
+
+    print('Tasks generated:')
+    pprint.pprint(taskList)
+    print('\n[Run tasks]', '-' * 20)
+
+    runTaskByPriority(taskList)
 
