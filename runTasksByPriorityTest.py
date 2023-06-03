@@ -55,7 +55,6 @@ def runTaskCommand(task):
                                                       task.get('priority')))
 
 
-
 def runTasksByPriority(taskList):
     """ Run the tasks in the order of their priorities.
 
