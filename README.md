@@ -1,15 +1,15 @@
 # Request
-Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [0, 10], where work items of the same priority are processed in the order they are received. 
+Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [1, 10], where work items of the same priority are processed in the order they are received. 
 
 # What it does?
 
 
 # Details
 1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: 
-It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 0 to 10.
+It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 1 to 10.
    - `itemNum`:  Decide the amonut of tasks in the list. Default is 6.
    - `commandTextCount`: The amount of ramdom alphabet characters in `command`. Default is 4.
-   - `priorityRange`: For setting the range of priority. Default is (0, 10) 
+   - `priorityRange`: For setting the range of priority. Default is (1, 10) 
 ```
 [{'command': 'mnDO_0', 'priority': 2},
  {'command': 'KsEn_1', 'priority': 8},
@@ -48,7 +48,7 @@ Tasks sorted:
  {'command': 'RaTW_3', 'priority': 1},
  {'command': 'fctz_8', 'priority': 1}]
 --------------------------------------------------
-insert task: {'command': 'GvsK_0', 'priority': 0}
+insert task: {'command': 'GvsK_0', 'priority': 1}
 --------------------------------------------------
 Result:
 [{'command': 'BuPN_6', 'priority': 9},
@@ -60,6 +60,6 @@ Result:
  {'command': 'ZqQf_0', 'priority': 3},
  {'command': 'xJPt_9', 'priority': 2},
  {'command': 'RaTW_3', 'priority': 1},
- {'command': 'GvsK_0', 'priority': 0},
- {'command': 'fctz_8', 'priority': 1}]
+ {'command': 'fctz_8', 'priority': 1},
+ {'command': 'GvsK_0', 'priority': 1}]
 ```
