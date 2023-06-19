@@ -5,7 +5,7 @@ Implement a simple priority queue. Assume an incoming dictionary containing two 
 When the UI is first launched, it automatically generated a few jobs and sorted those jobs by their priorities. (High to low) In the upper section `Current Jobs`, you can see the first job is running and the others are waiting.
 ![alt text](/uiLaunch.png?raw=true)
 
-We can submit new jobs on the lower section `Submit New Jobs`. The name and the priority of the job can be edited. After the job is submitted, it would appear on the `Current Jobs` section, with a note of `Newly submitted [number]`
+We can submit new jobs on the lower section `Submit New Jobs`. The name and the priority of the job can be edited. After the job is submitted, it would appear on the `Current Jobs` section, with a note of `Newly submitted [number]`. The job would be inserted based on its priority. If there is jobs on the list having the same priority, the newly added job would be after the already existing one.
 ![alt text](/uiSubmit.png?raw=true)
 
 
