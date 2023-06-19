@@ -1,9 +1,13 @@
+# Request
+Implement a simple priority queue. Assume an incoming dictionary containing two keys; command to be executed and priority. Priority is an integer value [1, 10], where work items of the same priority are processed in the order they are received. 
+
 # UI
+When the UI is first launched, it automatically generated a few jobs and sorted those jobs by their priorities. (High to low) In the upper section `Current Jobs`, you can see the first job is running and the others are waiting.
 ![alt text](/uiLaunch.png?raw=true)
+
+We can submit new jobs on the lower section `Submit New Jobs`. The name and the priority of the job can be edited. After the job is submitted, it would appear on the `Current Jobs` section, with a note of `Newly submitted [number]`
 ![alt text](/uiSubmit.png?raw=true)
 
-# Request
-Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [1, 10], where work items of the same priority are processed in the order they are received. 
 
 # What it does?
 
