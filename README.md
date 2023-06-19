@@ -2,8 +2,7 @@
 Implement a simple priority queue. Assume an incoming stream of dictionaries containing two keys; command to be executed and priority. Priority is an integer value [0, 10], where work items of the same priority are processed in the order they are received. 
 
 # What it does?
-1. Generate a mock task list for test.
-2. Dry run the command of each tasks. (printing out the command)
+
 
 # Details
 1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: 
@@ -20,33 +19,47 @@ It is a function for generating a list of mock tasks.  Each element in the list 
  {'command': 'cDIN_5', 'priority': 6}]
 ```
 
-2. `runTaskCommand(dict)`: Run the command of the task. (In this case, it is printing out string like: `run command: TpKE_2, task priority: 10`.)
-3. `runTasksByPriority()`: The actaul function of running the input task list in an order of task priorities. Higher priorities are having lagerer numerical values.
+
 
 # Result
-The result of running `runTasksByPriorityTest.py` would be like the followings :
+The result of running `core.py` would be like the followings :
 ```
 Tasks generated:
-[{'command': 'mnDO_0', 'priority': 2},
- {'command': 'KsEn_1', 'priority': 8},
- {'command': 'TpKE_2', 'priority': 10},
- {'command': 'vyLL_3', 'priority': 3},
- {'command': 'Gybo_4', 'priority': 9},
- {'command': 'cDIN_5', 'priority': 6},
- {'command': 'IObN_6', 'priority': 3},
- {'command': 'HglU_7', 'priority': 5},
- {'command': 'ERRH_8', 'priority': 7},
- {'command': 'Yzvb_9', 'priority': 9}]
-
-[Run tasks] --------------------
-run command: TpKE_2, task priority: 10
-run command: Gybo_4, task priority: 9
-run command: Yzvb_9, task priority: 9
-run command: KsEn_1, task priority: 8
-run command: ERRH_8, task priority: 7
-run command: cDIN_5, task priority: 6
-run command: HglU_7, task priority: 5
-run command: vyLL_3, task priority: 3
-run command: IObN_6, task priority: 3
-run command: mnDO_0, task priority: 2
+[{'command': 'ZqQf_0', 'priority': 3},
+ {'command': 'kSlv_1', 'priority': 8},
+ {'command': 'yFKF_2', 'priority': 8},
+ {'command': 'RaTW_3', 'priority': 1},
+ {'command': 'lQPI_4', 'priority': 4},
+ {'command': 'Reey_5', 'priority': 8},
+ {'command': 'BuPN_6', 'priority': 9},
+ {'command': 'URFR_7', 'priority': 7},
+ {'command': 'fctz_8', 'priority': 1},
+ {'command': 'xJPt_9', 'priority': 2}]
+--------------------------------------------------
+Tasks sorted:
+[{'command': 'BuPN_6', 'priority': 9},
+ {'command': 'kSlv_1', 'priority': 8},
+ {'command': 'yFKF_2', 'priority': 8},
+ {'command': 'Reey_5', 'priority': 8},
+ {'command': 'URFR_7', 'priority': 7},
+ {'command': 'lQPI_4', 'priority': 4},
+ {'command': 'ZqQf_0', 'priority': 3},
+ {'command': 'xJPt_9', 'priority': 2},
+ {'command': 'RaTW_3', 'priority': 1},
+ {'command': 'fctz_8', 'priority': 1}]
+--------------------------------------------------
+insert task: {'command': 'GvsK_0', 'priority': 0}
+--------------------------------------------------
+Result:
+[{'command': 'BuPN_6', 'priority': 9},
+ {'command': 'kSlv_1', 'priority': 8},
+ {'command': 'yFKF_2', 'priority': 8},
+ {'command': 'Reey_5', 'priority': 8},
+ {'command': 'URFR_7', 'priority': 7},
+ {'command': 'lQPI_4', 'priority': 4},
+ {'command': 'ZqQf_0', 'priority': 3},
+ {'command': 'xJPt_9', 'priority': 2},
+ {'command': 'RaTW_3', 'priority': 1},
+ {'command': 'GvsK_0', 'priority': 0},
+ {'command': 'fctz_8', 'priority': 1}]
 ```
