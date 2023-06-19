@@ -14,10 +14,8 @@ We can submit new jobs on the lower section `Submit New Jobs`. The name and the 
 # Details
 ## core.py
 It is for generating lists of mock tasks and sorting tasks, finding where to insert a new task based on their priorities.
-1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 1 to 10.
-   - `itemNum`:  Decide the amonut of tasks in the list. Default is 6.
-   - `commandTextCount`: The amount of ramdom alphabet characters in `command`. Default is 4.
-   - `priorityRange`: For setting the range of priority. Default is (1, 10) 
+### Functions
+1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: It is a function for generating a list of mock tasks. The list would look like:
 ```
 [{'command': 'mnDO_0', 'priority': 2},
  {'command': 'KsEn_1', 'priority': 8},
@@ -26,12 +24,12 @@ It is for generating lists of mock tasks and sorting tasks, finding where to ins
  {'command': 'Gybo_4', 'priority': 9},
  {'command': 'cDIN_5', 'priority': 6}]
 ```
-2. `binarySearchInsertIndex(int, listOfNumber, highIndex, lowIndex)`: 
-## ui.py
+2. `sortTasksByPriority(list)`: Sort the whole list of tasks by priorites.
+3. `getInsertIndex(dict, list)`: Get the index of where the dict should be inserted into the list.
+4. `binarySearchInsertIndex(int, list, int, int)`: Use binary search to find where to insert the new value.
+5. `getLargestSameValueIndex(int, list)`: Get the largest index of a certain value of a list.
 
-
-
-# Testing core.py
+### Testing core.py
 The result of running `core.py` would be like the followings :
 ```
 Tasks generated:
@@ -73,3 +71,10 @@ Result:
  {'command': 'fctz_8', 'priority': 1},
  {'command': 'GvsK_0', 'priority': 1}]
 ```
+
+## ui.py
+The ui part of the tool.
+### Widgets
+1. `MockJobWindow()`: main tool widget
+2. `JobListTable()`: the widget that shows the list of jobs
+3. `SubmitWidget()`: the widget for submitting new job
