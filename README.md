@@ -1,20 +1,20 @@
 # Request
 Implement a simple priority queue. Assume an incoming dictionary containing two keys; command to be executed and priority. Priority is an integer value [1, 10], where work items of the same priority are processed in the order they are received. 
 
-# UI
+# Launch the UI
+The tool can be launched by executing ui.py
+
+# What the UI does?
 When the UI is first launched, it automatically generated a few jobs and sorted those jobs by their priorities. (High to low) In the upper section `Current Jobs`, you can see the first job is running and the others are waiting.
 ![alt text](/uiLaunch.png?raw=true)
 
 We can submit new jobs on the lower section `Submit New Jobs`. The name and the priority of the job can be edited. After the job is submitted, it would appear on the `Current Jobs` section, with a note of `Newly submitted [number]`. The job would be inserted based on its priority. If there is jobs on the list having the same priority, the newly added job would be after the already existing one.
 ![alt text](/uiSubmit.png?raw=true)
 
-
-# What it does?
-
-
 # Details
-1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: 
-It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 1 to 10.
+## core.py
+It is for generating lists of mock tasks and sorting tasks, finding where to insert a new task based on their priorities.
+1. `generateTaskList(itemNum=int, commandTextCount=int, priorityRange=(int, int))`: It is a function for generating a list of mock tasks.  Each element in the list is a dictionary containing 2 keys `command` and `priority`. The values of `command` consist of a few random alphabet characters, underline and a number (the number would be the index of the task in the list). The values of `priority` are interger in a range from 1 to 10.
    - `itemNum`:  Decide the amonut of tasks in the list. Default is 6.
    - `commandTextCount`: The amount of ramdom alphabet characters in `command`. Default is 4.
    - `priorityRange`: For setting the range of priority. Default is (1, 10) 
@@ -26,10 +26,12 @@ It is a function for generating a list of mock tasks.  Each element in the list 
  {'command': 'Gybo_4', 'priority': 9},
  {'command': 'cDIN_5', 'priority': 6}]
 ```
+2. `binarySearchInsertIndex(int, listOfNumber, highIndex, lowIndex)`: 
+## ui.py
 
 
 
-# Result
+# Testing core.py
 The result of running `core.py` would be like the followings :
 ```
 Tasks generated:
