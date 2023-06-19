@@ -5,7 +5,7 @@ from string import ascii_letters
 
 def generateTaskList(itemNum=6,
                      commandTextCount=4,
-                     priorityRange=(0, 10)):
+                     priorityRange=(1, 10)):
     """ Generate a list of mock tasks for the purpose of testing.
 
     :param itemNum: number of tasks that are going to be generated
